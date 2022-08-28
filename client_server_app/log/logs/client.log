@@ -1,0 +1,24 @@
+2022-08-26 23:00:38,960  CRITICAL  client_log_config  Test_final_3 
+2022-08-26 23:00:54,903  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:01:11,683  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:01:13,926  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:08:32,148  CRITICAL  client_log_config  Test_final_3 
+2022-08-26 23:11:06,428  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:11:41,538  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:11:43,547  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:11:55,902  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:12:02,783  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:16:22,908  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:16:25,551  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:16:49,424  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:17:25,709  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:23:48,066  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-26 23:23:48,066  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661545428.0660608, 'user': {'account_name': 'Guest'}}" 
+2022-08-26 23:23:48,068  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-26 23:23:48,068  INFO  client  Response is okay. Returned 200: OK 
+2022-08-26 23:23:48,068  INFO  client  Response from server: 200 : OK 
+2022-08-26 23:25:35,963  INFO  client  Creating presence message for the server with "account_name" = Carlos 
+2022-08-26 23:25:35,964  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661545535.9643679, 'user': {'account_name': 'Carlos'}}" 
+2022-08-26 23:25:35,967  INFO  client  Processing response from the server. Response: "{'response': 400, 'error': 'Bad Request'}" 
+2022-08-26 23:25:35,968  CRITICAL  client  Response from the server 400! 
+2022-08-26 23:25:35,968  INFO  client  Response from server: 400: Bad Request 
