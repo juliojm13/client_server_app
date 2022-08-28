@@ -22,3 +22,53 @@
 2022-08-26 23:25:35,967  INFO  client  Processing response from the server. Response: "{'response': 400, 'error': 'Bad Request'}" 
 2022-08-26 23:25:35,968  CRITICAL  client  Response from the server 400! 
 2022-08-26 23:25:35,968  INFO  client  Response from server: 400: Bad Request 
+2022-08-28 14:16:23,566  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 14:16:23,567  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661685383.5673845, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 14:16:23,573  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 14:16:23,573  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 14:16:23,574  INFO  client  Response from server: 200 : OK 
+2022-08-28 16:06:56,531  DEBUG  decorates  Was called the function: say_hiwith arguments: (5, 6, 23) {'hi': 'yes', 'none': 'False'}from the module:  __main__ and was returned None.The function was called from the function<module> 
+2022-08-28 16:07:38,256  DEBUG  decorates  Was called the function "say_hi" with arguments: (5, 6, 23) {'hi': 'yes', 'none': 'False'}from the module:  __main__ and was returned None.The function was called from the function<module> 
+2022-08-28 16:08:58,215  DEBUG  decorates  Was called the function "say_hi" with arguments: (5, 6, 23) {'hi': 'yes', 'none': 'False'} from the module:  __main__ and was returned None.The function was called from the functionmain 
+2022-08-28 16:09:28,108  DEBUG  decorates  Was called the function "say_hi" with arguments: (5, 6, 23) {'hi': 'yes', 'none': 'False'} from the module:  __main__ and was returned None.The function was called from the function "main" 
+2022-08-28 16:10:28,950  DEBUG  decorators  Was called the function "say_hi" with arguments: (5, 6, 23) {'hi': 'yes', 'none': 'False'} from the module:  __main__ and was returned None.The function was called from the function "main" 
+2022-08-28 16:13:54,348  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 16:13:54,348  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661692434.3489485, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 16:13:54,371  DEBUG  client  Was called the function "create_presence" with arguments: () {} from the module:  __main__ and was returned {'action': 'presence', 'time': 1661692434.3489485, 'user': {'account_name': 'Guest'}}.The function was called from the function "main" 
+2022-08-28 16:13:54,394  DEBUG  server  Was called the function "process_clients_message" with arguments: ({'action': 'presence', 'time': 1661692434.3489485, 'user': {'account_name': 'Guest'}},) {} from the module:  __main__ and was returned {'response': 200}.The function was called from the function "main" 
+2022-08-28 16:13:54,394  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 16:13:54,394  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 16:13:54,395  DEBUG  client  Was called the function "process_response" with arguments: ({'response': 200},) {} from the module:  __main__ and was returned 200 : OK.The function was called from the function "main" 
+2022-08-28 16:13:54,395  INFO  client  Response from server: 200 : OK 
+2022-08-28 16:19:05,883  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 16:19:05,883  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661692745.8831503, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 16:19:05,902  DEBUG  client  Was called the function "create_presence" with arguments: () {} from the module:  decorators and was returned {'action': 'presence', 'time': 1661692745.8831503, 'user': {'account_name': 'Guest'}}.The function was called from the function "main" 
+2022-08-28 16:19:05,922  DEBUG  server  Was called the function "process_clients_message" with arguments: ({'action': 'presence', 'time': 1661692745.8831503, 'user': {'account_name': 'Guest'}},) {} from the module:  decorators and was returned {'response': 200}.The function was called from the function "main" 
+2022-08-28 16:19:05,922  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 16:19:05,922  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 16:19:05,923  DEBUG  client  Was called the function "process_response" with arguments: ({'response': 200},) {} from the module:  decorators and was returned 200 : OK.The function was called from the function "main" 
+2022-08-28 16:19:05,923  INFO  client  Response from server: 200 : OK 
+2022-08-28 16:21:17,521  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 16:21:17,521  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661692877.5219264, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 16:21:17,540  DEBUG  decorators  Was called the function "create_presence" with arguments: () {} from the module:  __main__ and was returned {'action': 'presence', 'time': 1661692877.5219264, 'user': {'account_name': 'Guest'}}.The function was called from the function "main" 
+2022-08-28 16:21:17,560  DEBUG  decorators  Was called the function "process_clients_message" with arguments: ({'action': 'presence', 'time': 1661692877.5219264, 'user': {'account_name': 'Guest'}},) {} from the module:  __main__ and was returned {'response': 200}.The function was called from the function "main" 
+2022-08-28 16:21:17,560  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 16:21:17,560  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 16:21:17,561  DEBUG  decorators  Was called the function "process_response" with arguments: ({'response': 200},) {} from the module:  __main__ and was returned 200 : OK.The function was called from the function "main" 
+2022-08-28 16:21:17,561  INFO  client  Response from server: 200 : OK 
+2022-08-28 16:21:37,804  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 16:21:37,804  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661692897.8042264, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 16:21:37,822  DEBUG  client  Was called the function "create_presence" with arguments: () {} from the module:  __main__ and was returned {'action': 'presence', 'time': 1661692897.8042264, 'user': {'account_name': 'Guest'}}.The function was called from the function "main" 
+2022-08-28 16:21:37,841  DEBUG  server  Was called the function "process_clients_message" with arguments: ({'action': 'presence', 'time': 1661692897.8042264, 'user': {'account_name': 'Guest'}},) {} from the module:  __main__ and was returned {'response': 200}.The function was called from the function "main" 
+2022-08-28 16:21:37,841  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 16:21:37,842  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 16:21:37,842  DEBUG  client  Was called the function "process_response" with arguments: ({'response': 200},) {} from the module:  __main__ and was returned 200 : OK.The function was called from the function "main" 
+2022-08-28 16:21:37,842  INFO  client  Response from server: 200 : OK 
+2022-08-28 16:25:01,844  INFO  client  Creating presence message for the server with "account_name" = Guest 
+2022-08-28 16:25:01,844  INFO  client  Final presence message for the server: "{'action': 'presence', 'time': 1661693101.844886, 'user': {'account_name': 'Guest'}}" 
+2022-08-28 16:25:01,863  DEBUG  client  Was called the function "create_presence" with arguments: () {} from the module:  __main__ and was returned {'action': 'presence', 'time': 1661693101.844886, 'user': {'account_name': 'Guest'}}.The function was called from the function "main" 
+2022-08-28 16:25:01,865  DEBUG  server  Was called the function "process_clients_message" with arguments: ({'action': 'presence', 'time': 1661693101.844886, 'user': {'account_name': 'Guest'}},) {} from the module:  __main__ and was returned {'response': 200}.The function was called from the function "main" 
+2022-08-28 16:25:01,865  INFO  client  Processing response from the server. Response: "{'response': 200}" 
+2022-08-28 16:25:01,865  INFO  client  Response is okay. Returned 200: OK 
+2022-08-28 16:25:01,865  DEBUG  client  Was called the function "process_response" with arguments: ({'response': 200},) {} from the module:  __main__ and was returned 200 : OK.The function was called from the function "main" 
+2022-08-28 16:25:01,866  INFO  client  Response from server: 200 : OK 

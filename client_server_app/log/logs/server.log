@@ -1,25 +1,18 @@
-2022-08-26 23:00:26,930  CRITICAL  server_log_config  Test_final 
-2022-08-26 23:00:54,902  INFO  server  Message from the client <socket.socket fd=388, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50814)>: {'action': 'presence', 'time': 1661544054.9017322, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:01:11,683  INFO  server  Message from the client <socket.socket fd=400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50815)>: {'action': 'presence', 'time': 1661544071.6828923, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:01:13,923  INFO  server  Message from the client <socket.socket fd=388, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50816)>: {'action': 'presence', 'time': 1661544073.9222443, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:09:41,147  CRITICAL  server_log_config  Test_final 
-2022-08-26 23:11:06,427  INFO  server  Message from the client <socket.socket fd=404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50903)>: {'action': 'presence', 'time': 1661544666.42679, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:11:41,538  INFO  server  Message from the client <socket.socket fd=416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50904)>: {'action': 'presence', 'time': 1661544701.5379164, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:11:43,546  INFO  server  Message from the client <socket.socket fd=416, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50905)>: {'action': 'presence', 'time': 1661544703.5455992, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:11:55,902  INFO  server  Message from the client <socket.socket fd=396, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50906)>: {'action': 'presence', 'time': 1661544715.9006476, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:12:02,783  INFO  server  Message from the client <socket.socket fd=396, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50907)>: {'action': 'presence', 'time': 1661544722.7819839, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:13:12,769  ERROR  server  Was received a not correct message from the client!  
-2022-08-26 23:16:22,908  INFO  server  Message from the client <socket.socket fd=452, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50934)>: {'action': 'presence', 'time': 1661544982.9064207, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:16:25,550  INFO  server  Message from the client <socket.socket fd=328, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50935)>: {'action': 'presence', 'time': 1661544985.5494983, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:16:49,423  INFO  server  Message from the client <socket.socket fd=424, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50938)>: {'action': 'presence', 'time': 1661545009.4217296, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:16:49,423  INFO  server  Processing message from the client {'action': 'presence', 'time': 1661545009.4217296, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:16:49,423  INFO  server  The message is correct. 
-2022-08-26 23:17:25,708  INFO  server  Message from the client <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50939)>: {'action': 'presence', 'time': 1661545045.7075906, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:17:25,708  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661545045.7075906, 'user': {'account_name': 'Guest'}}"  
-2022-08-26 23:17:25,709  INFO  server  The message is correct. 
-2022-08-26 23:23:48,067  INFO  server  Message from the client <socket.socket fd=420, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50959)>: {'action': 'presence', 'time': 1661545428.0660608, 'user': {'account_name': 'Guest'}} 
-2022-08-26 23:23:48,067  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661545428.0660608, 'user': {'account_name': 'Guest'}}"  
-2022-08-26 23:23:48,068  INFO  server  The message is correct. Response 200 OK. 
-2022-08-26 23:25:35,966  INFO  server  Message from the client <socket.socket fd=424, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 50968)>: {'action': 'presence', 'time': 1661545535.9643679, 'user': {'account_name': 'Carlos'}} 
-2022-08-26 23:25:35,966  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661545535.9643679, 'user': {'account_name': 'Carlos'}}"  
-2022-08-26 23:25:35,966  ERROR  server  Message is not correct, returning Bad Request! 
+2022-08-28 14:16:23,569  INFO  server  Message from the client <socket.socket fd=428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 62859)>: {'action': 'presence', 'time': 1661685383.5673845, 'user': {'account_name': 'Guest'}} 
+2022-08-28 14:16:23,572  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661685383.5673845, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 14:16:23,573  INFO  server  The message is correct. Response 200 OK. 
+2022-08-28 16:13:54,373  INFO  server  Message from the client <socket.socket fd=356, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57540)>: {'action': 'presence', 'time': 1661692434.3489485, 'user': {'account_name': 'Guest'}} 
+2022-08-28 16:13:54,375  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661692434.3489485, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 16:13:54,375  INFO  server  The message is correct. Response 200 OK. 
+2022-08-28 16:19:05,903  INFO  server  Message from the client <socket.socket fd=348, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57568)>: {'action': 'presence', 'time': 1661692745.8831503, 'user': {'account_name': 'Guest'}} 
+2022-08-28 16:19:05,903  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661692745.8831503, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 16:19:05,903  INFO  server  The message is correct. Response 200 OK. 
+2022-08-28 16:21:17,540  INFO  server  Message from the client <socket.socket fd=412, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57574)>: {'action': 'presence', 'time': 1661692877.5219264, 'user': {'account_name': 'Guest'}} 
+2022-08-28 16:21:17,541  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661692877.5219264, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 16:21:17,541  INFO  server  The message is correct. Response 200 OK. 
+2022-08-28 16:21:37,823  INFO  server  Message from the client <socket.socket fd=336, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57575)>: {'action': 'presence', 'time': 1661692897.8042264, 'user': {'account_name': 'Guest'}} 
+2022-08-28 16:21:37,823  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661692897.8042264, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 16:21:37,823  INFO  server  The message is correct. Response 200 OK. 
+2022-08-28 16:25:01,864  INFO  server  Message from the client <socket.socket fd=404, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57635)>: {'action': 'presence', 'time': 1661693101.844886, 'user': {'account_name': 'Guest'}} 
+2022-08-28 16:25:01,864  INFO  server  Processing from the client message: "{'action': 'presence', 'time': 1661693101.844886, 'user': {'account_name': 'Guest'}}"  
+2022-08-28 16:25:01,864  INFO  server  The message is correct. Response 200 OK. 

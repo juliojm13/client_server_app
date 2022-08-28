@@ -7,10 +7,12 @@ from common.utils import send_message, get_message
 import time
 import log.configs.client_log_config
 import logging
+from decorators import log
 
 LOGGER = logging.getLogger('client_logger')
 
 
+@log
 def create_presence(account_name='Guest'):
     """
     Function creates a presence message to send to the server
@@ -29,6 +31,7 @@ def create_presence(account_name='Guest'):
     return presence_message
 
 
+@log
 def process_response(response):
     """
     Gets the response from the server and returns the response code
@@ -62,7 +65,6 @@ def main():
         server_port = DEFAULT_PORT
     except ValueError:
         LOGGER.error('The number of the port must be in the diapason from 1024 to 65535! ')
-        print("The number of the port must be in the diapason from 1024 to 65535! ")
         sys.exit(1)
 
     # starting the socket

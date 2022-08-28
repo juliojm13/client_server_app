@@ -6,10 +6,12 @@ from common.variables import DEFAULT_PORT, MAX_CONNECTIONS, ACTION, PRESENCE, TI
 from common.utils import get_message, send_message
 import socket
 import json
+from decorators import log
 
 LOGGER = logging.getLogger('server_logger')
 
 
+@log
 def process_clients_message(message):
     """
     As param we get the message from the client as a dict Python object, validates the message and returns the response
