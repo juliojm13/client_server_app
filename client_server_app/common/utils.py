@@ -1,7 +1,9 @@
 from common.variables import MAX_PACKAGE_LENGTH, ENCODING
 import json
+from decorators import log
 
 
+@log
 def get_message(socket):
     """
     The function gets the message sent by the socket and decodes it from bytes to dict. If got something else instead
@@ -19,6 +21,7 @@ def get_message(socket):
     raise ValueError
 
 
+@log
 def send_message(message, socket):
     """
     The function gets as param the message that we want to send as a python dict object and the socket that will receive

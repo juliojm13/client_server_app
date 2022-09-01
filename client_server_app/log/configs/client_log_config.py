@@ -16,7 +16,7 @@ FILE_HANDLER = logging.FileHandler(log_file_name, encoding='utf-8')
 FILE_HANDLER.setFormatter(FORMATTER)
 
 STREAM_HANDLER = logging.StreamHandler(sys.stdout)
-STREAM_HANDLER.setLevel(CLIENT_LOGGING_LEVEL)
+STREAM_HANDLER.setLevel(logging.INFO)
 STREAM_HANDLER.setFormatter(FORMATTER)
 
 LOGGER.addHandler(STREAM_HANDLER)
