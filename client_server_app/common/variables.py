@@ -19,8 +19,11 @@ ACCOUNT_NAME = 'account_name'
 
 # Other keys for JIM protocol interaction
 PRESENCE = 'presence'
+MESSAGE = 'message'
+MESSAGE_TEXT = 'mess_text'
 RESPONSE = 'response'
 ERROR = 'error'
+SENDER = 'sender'
 
 # Logging level for client logger and server logger
 CLIENT_LOGGING_LEVEL = 10

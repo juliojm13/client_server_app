@@ -18,7 +18,7 @@ LOG_FILE = TimedRotatingFileHandler(log_file_name, encoding='utf-8', interval=1,
 LOG_FILE.setFormatter(FORMATTER)
 
 STREAM_HANDLER = logging.StreamHandler(sys.stdout)
-STREAM_HANDLER.setLevel(SERVER_LOGGING_LEVEL)
+STREAM_HANDLER.setLevel(logging.INFO)
 STREAM_HANDLER.setFormatter(FORMATTER)
 
 LOGGER.addHandler(STREAM_HANDLER)
