@@ -24,6 +24,8 @@ MESSAGE_TEXT = 'mess_text'
 RESPONSE = 'response'
 ERROR = 'error'
 SENDER = 'sender'
+DESTINATION = 'destination'
+EXIT = 'exit'
 
 # Logging level for client logger and server logger
 CLIENT_LOGGING_LEVEL = 10
