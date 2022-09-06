@@ -1,1 +1,1 @@
-# client_server_app
+# Console messenger in Python
