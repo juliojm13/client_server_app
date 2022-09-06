@@ -2,7 +2,7 @@ import sys
 import log.configs.server_log_config
 import logging
 from common.variables import DEFAULT_PORT, MAX_CONNECTIONS, ACTION, PRESENCE, TIME, USER, \
-    ACCOUNT_NAME, RESPONSE, ERROR, MESSAGE, MESSAGE_TEXT, SENDER
+    ACCOUNT_NAME, RESPONSE, ERROR, MESSAGE, MESSAGE_TEXT, SENDER, DESTINATION, EXIT
 from common.utils import get_message, send_message
 import socket
 import time
@@ -14,32 +14,68 @@ LOGGER = logging.getLogger('server_logger')
 
 
 @log
-def process_clients_message(message, messages_list, client):
+def process_clients_message(message, messages_list, client, clients, names):
     """
     As param we get the message from the client as a dict Python object, validates the message and returns the response
+    :param names: Names of the clients.
+    :param clients: Clients connected to the server.
     :param client: Client from whom we received the message.
     :param messages_list: List of the messages that where sent by clients
     :param message: Client's message as a dict python object
     :return: response as a dict python object
     """
 
-    LOGGER.info(f'Message from the client {client}: {message}')
     LOGGER.info(f'Processing from the client message: "{message}" ')
-    if ACTION in message and message[ACTION] == PRESENCE and TIME in message and USER in message \
-            and message[USER][ACCOUNT_NAME] == 'Guest':
-        LOGGER.info('The message is correct. Response 200 OK.')
-        send_message({RESPONSE: 200}, client)
+    if ACTION in message and message[ACTION] == PRESENCE and TIME in message and USER in message:
+        if message[USER][ACCOUNT_NAME] not in names.keys():
+            names[message[USER][ACCOUNT_NAME]] = client
+            LOGGER.info(f'Added client {message[USER][ACCOUNT_NAME]}.')
+            send_message({RESPONSE: 200}, client)
+        else:
+            send_message({
+                RESPONSE: 400,
+                ERROR: f'Bad Request. User with name {message[USER][ACCOUNT_NAME]} already exists!'
+            }, client)
+            clients.remove(client)
+            client.close()
         return
     elif ACTION in message and message[ACTION] == MESSAGE and TIME in message \
-            and MESSAGE_TEXT in message:
-        messages_list.append((message[ACCOUNT_NAME], message[MESSAGE_TEXT]))
-        LOGGER.info(f'Message {message[MESSAGE_TEXT]} was added to the messages queue')
+            and MESSAGE_TEXT in message and SENDER in message and DESTINATION in message:
+        messages_list.append(message)
+        LOGGER.info(f'Message {message} was added to the messages queue')
         return
-    LOGGER.error('Message is not correct, returning Bad Request!')
-    send_message({
-        RESPONSE: 400,
-        ERROR: 'Bad Request'
-    }, client)
+    elif ACTION in message and message[ACTION] == EXIT and ACCOUNT_NAME in message:
+        clients.remove(names[message[ACCOUNT_NAME]])
+        names[message[ACCOUNT_NAME]].close()
+        del names[message[ACCOUNT_NAME]]
+        return
+    else:
+        LOGGER.error('Message is not correct, returning Bad Request!')
+        send_message({
+            RESPONSE: 400,
+            ERROR: 'Bad Request'
+        }, client)
+
+
+@log
+def process_message(message, names, listen_socks):
+    """
+    Function sends the message to the addressee.
+    :param message: Python dict with the message.
+    :param names: Connected clients to the server.
+    :param listen_socks: Clients waiting messages.
+    :return:
+    """
+    if message[DESTINATION] in names and names[message[DESTINATION]] in listen_socks:
+        send_message(message, names[message[DESTINATION]])
+        LOGGER.info(f'Sended message to {message[DESTINATION]} '
+                    f'from {message[SENDER]}.')
+    elif message[DESTINATION] in names and names[message[DESTINATION]] not in listen_socks:
+        raise ConnectionError
+    else:
+        LOGGER.error(
+            f'User {message[DESTINATION]} is not connected to the server, '
+            f'not possible to send a message.')
 
 
 def main():
@@ -86,6 +122,8 @@ def main():
     clients = []
     messages = []
 
+    names = dict()
+
     # listening port
     transport.listen(MAX_CONNECTIONS)
 
@@ -112,26 +150,21 @@ def main():
             for client_with_message in recv_data_lst:
                 try:
                     message_from_client = get_message(client_with_message)
-                    process_clients_message(message_from_client, messages, client_with_message)
+                    process_clients_message(message_from_client, messages, client_with_message, clients, names)
                 except:
                     LOGGER.error(f'The connection with the client {client_with_message.getpeername()} was lost ')
                     clients.remove(client_with_message)
 
-        if messages and send_data_lst:
-            message = {
-                ACTION: MESSAGE,
-                SENDER: messages[0][0],
-                TIME: time.time(),
-                MESSAGE_TEXT: messages[0][1]
-            }
-            del messages[0]
-            for waiting_client in send_data_lst:
+        for message in messages:
+            if message and message[DESTINATION]:
                 try:
-                    send_message(message, waiting_client)
+                    process_message(message, names, send_data_lst)
                 except:
-                    LOGGER.error(f'Was not possible to send the message to the client {waiting_client}\n'
+                    LOGGER.error(f'Was not possible to send the message to the client {message[DESTINATION]}\n'
                                  f'It seems the connection was lost')
-                    clients.remove(waiting_client)
+                    clients.remove(names[message[DESTINATION]])
+                    del names[message[DESTINATION]]
+                message.clear()
 
 
 if __name__ == '__main__':
